@@ -1,4 +1,4 @@
-package com.voyageth.spring_boot_helloworld;
+package com.voyageth.spring_boot_helloworld.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +12,7 @@ public class ExampleController {
 
 	@RequestMapping("/test")
 	String homeTest() {
-		return "{'result':'Hello World!2'}";
+		return "{'result':'Hello World!123435'}";
 	}
 	@RequestMapping("/test/abc")
 	String homeTestAbc() {

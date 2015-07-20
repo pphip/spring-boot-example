@@ -1,0 +1,8 @@
+안녕 세계!
+application.version : ${application.version}
+application.formatted-version : ${application.formatted-version}
+spring-boot.version : ${spring-boot.version}
+spring-boot.formatted-version : ${spring-boot.formatted-version}
+Ansi.NAME : ${Ansi.NAME}
+
+
