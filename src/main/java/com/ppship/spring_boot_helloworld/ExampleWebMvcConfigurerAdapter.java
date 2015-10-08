@@ -1,4 +1,4 @@
-package com.voyageth.spring_boot_helloworld;
+package com.ppship.spring_boot_helloworld;
 
 import java.util.List;
 
