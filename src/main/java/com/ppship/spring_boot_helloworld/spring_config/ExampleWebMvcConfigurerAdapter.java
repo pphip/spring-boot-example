@@ -1,7 +1,11 @@
-package com.ppship.spring_boot_helloworld;
+package com.ppship.spring_boot_helloworld.spring_config;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.stereotype.Component;
@@ -127,6 +131,14 @@ public class ExampleWebMvcConfigurerAdapter implements WebMvcConfigurer {
 	public Validator getValidator() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Bean
+	public EmbeddedServletContainerFactory servletContainer() {
+		TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
+		factory.setPort(8080);
+		factory.setSessionTimeout(10, TimeUnit.MINUTES);
+		return factory;
 	}
 
 }
