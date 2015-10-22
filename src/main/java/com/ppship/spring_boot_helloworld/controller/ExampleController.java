@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ppship.spring_boot_helloworld.domain.City;
 import com.ppship.spring_boot_helloworld.domain.ProjectSettings;
 
 @RestController
@@ -36,7 +37,7 @@ public class ExampleController {
 	}
 
 	@RequestMapping("/test/eee")
-	String homeTestEee() {
+	String homeTestEee(City city) {
 		return "{'result':'Hello World!123435'}";
 	}
 }

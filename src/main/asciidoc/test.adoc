@@ -1,0 +1,20 @@
+[[resources-person-create]]
+=== person/create
+person create api
+
+==== Request structure
+include::{snippets}/person-create/request-fields.adoc[]
+
+==== Response structure
+include::{snippets}/person-create/response-fields.adoc[]
+
+==== Example request
+
+===== curl
+include::{snippets}/person-create/curl-request.adoc[]
+
+===== http
+include::{snippets}/person-create/http-request.adoc[]
+
+==== Example response
+include::{snippets}/person-create/http-response.adoc[]
