@@ -86,6 +86,12 @@ public class PersonControllerDocumentation {
 						,fields.withPath("city.id").description("person.city.id!")
 						,fields.withPath("description").description("person descrition!").optional()
 				)
+				,responseFields(
+						fields.withPath("name").description("person name!")
+						,fields.withPath("city").description("person.city!")
+						,fields.withPath("city.id").description("person.city.id!")
+						,fields.withPath("description").description("person descrition!").optional()
+				)
 		);
 		
 		this.mockMvc.perform(

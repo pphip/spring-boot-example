@@ -72,6 +72,12 @@
 	  <artifactId>guava</artifactId>
 	  <version>18.0</version>
 	</dependency>
+	
+	<dependency>
+	  <groupId>com.neovisionaries</groupId>
+	  <artifactId>nv-i18n</artifactId>
+	  <version>1.17</version>
+	</dependency>
   </dependencies>
   
       <!-- (you don't need this if you are using a .RELEASE version) -->
