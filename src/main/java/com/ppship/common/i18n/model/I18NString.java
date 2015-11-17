@@ -3,18 +3,32 @@ package com.ppship.common.i18n.model;
 import java.util.Date;
 import java.util.Map;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.PreUpdate;
+import javax.persistence.Transient;
+
 import com.neovisionaries.i18n.CountryCode;
 import com.ppship.common.model.BaseObject;
 import com.ppship.common.util.JsonUtil;
 
+@Entity
 public class I18NString extends BaseObject {
 	private static final long serialVersionUID = 6972283191544924576L;
 
+	@Id
+	@GeneratedValue
 	private Long no;
+	@Column(nullable = false)
 	private String rawString;
+	@Transient
 	private Map<CountryCode, String> stringMap;
-	private Date createdAt;
-	private Date updatedAt;
+	@Column
+	private Date createdAt = new Date();
+	@Column
+	private Date updatedAt = new Date();
 
 	public Long getNo() {
 		return no;
@@ -63,5 +77,10 @@ public class I18NString extends BaseObject {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	@PreUpdate
+	public void setLastUpdate() {
+		this.updatedAt = new Date();
 	}
 }

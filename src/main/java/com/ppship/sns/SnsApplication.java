@@ -12,6 +12,6 @@ public class SnsApplication {
 				.showBanner(true) //
 				.sources(CommonApplication.class, SnsApplication.class) //
 				.run(args);
+		
 	}
-
 }
